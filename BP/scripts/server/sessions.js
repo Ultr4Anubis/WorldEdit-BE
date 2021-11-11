@@ -36,6 +36,7 @@ export class PlayerSession {
         this.history = new History(this.player);
         this.selectionPoints = [];
         this.setTool('pattern_picker');
+        this.setTool('pattern_air_picker');
         this.setTool('selection_wand');
         this.setTool('navigation_wand');
         this.setTool('cut');
@@ -168,7 +169,7 @@ export class PlayerSession {
             return;
         if (this.drawTimer <= 0) {
             this.drawTimer = 10;
-            const dimension = PlayerUtil.getDimension(this.player)[1];
+            const dimension = getPlayerDimension(this.player)[1];
             for (const point of this.drawPoints) {
                 Server.runCommand(`particle wedit:selection_draw ${printLocation(point, false)}`, dimension);
             }
@@ -246,7 +247,7 @@ Server.on('entityCreate', (entity) => {
         let dimension;
         for (const player in playerSessions) {
             if (playerSessions[player].onEntityCreate(entity, loc)) {
-                dimension = PlayerUtil.getDimension(playerSessions[player].getPlayer())[1];
+                dimension = getPlayerDimension(playerSessions[player].getPlayer())[1];
                 break;
             }
         }

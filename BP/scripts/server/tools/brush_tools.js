@@ -8,10 +8,10 @@ class BrushTool extends Tool {
     constructor(brush) {
         super();
         this.use = (player, session) => {
-            const dimension = PlayerUtil.getDimension(player)[1];
+            const dimension = getPlayerDimension(player)[1];
             const origin = player.location;
             origin.y += PLAYER_HEIGHT;
-            PlayerUtil.requestDirection(player).then(dir => {
+            requestPlayerDirection(player).then(dir => {
                 const hit = raytrace(dimension, origin, dir, this.range, this.traceMask);
                 if (!hit) {
                     throw RawText.translate('worldedit.jumpto.none');

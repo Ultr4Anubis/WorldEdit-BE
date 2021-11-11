@@ -16,7 +16,7 @@ export function getDirection(direction, player) {
             resolve(DIRECTIONS[dirChar]);
         }
         else {
-            PlayerUtil.requestDirection(player).then(dir => {
+            requestPlayerDirection(player).then(dir => {
                 let cardinal;
                 const absDir = [Math.abs(dir.x), Math.abs(dir.y), Math.abs(dir.z)];
                 if (absDir[0] > absDir[1] && absDir[0] > absDir[2]) {
