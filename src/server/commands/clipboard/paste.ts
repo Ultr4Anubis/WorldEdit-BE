@@ -4,8 +4,7 @@ import { assertBuilder } from '../../modules/assert.js';
 import { getSession } from '../../sessions.js';
 
 import { Regions } from '../../modules/regions.js';
-import { PlayerUtil } from '../../modules/player_util.js';
-import { addLocations, printLocation, subtractLocations } from '../../util.js';
+import { addLocations, getPlayerBlockLocation, printLocation, subtractLocations } from '../../util.js';
 import { commandList } from '../command_list.js';
 import { RawText } from '../../modules/rawtext.js';
 
@@ -13,7 +12,7 @@ const registerInformation = {
     cancelMessage: true,
     name: 'paste',
     description: 'Paste your clipboard in to the world',
-    usage: '[-osn]',
+    usage: '',
 };
 
 commandList['paste'] = [registerInformation, (session, builder, args) => {

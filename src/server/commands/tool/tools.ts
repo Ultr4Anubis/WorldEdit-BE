@@ -2,8 +2,7 @@ import { Player } from 'mojang-minecraft';
 import { Server } from '../../../library/Minecraft.js';
 import { Mask } from '../../modules/mask.js';
 import { RawText } from '../../modules/rawtext.js';
-import { printDebug } from '../../util.js';
-import { PlayerUtil } from '../../modules/player_util.js';
+import { getPlayerDimension, printDebug } from '../../util.js';
 import { commandList } from '../command_list.js';
 import { PlayerSession } from '../../sessions.js';
 

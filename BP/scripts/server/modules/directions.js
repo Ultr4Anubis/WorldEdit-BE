@@ -1,4 +1,4 @@
-import { PlayerUtil } from './player_util.js';
+import { requestPlayerDirection } from '../util.js';
 const directions = ['up', 'down', 'left', 'right', 'forward', 'back', 'north', 'south', 'east', 'west', 'me'];
 const dirAliases = ['u', 'd', 'l', 'r', 'f', 'b', 'n', 's', 'e', 'w', 'm'];
 const DIRECTIONS = {

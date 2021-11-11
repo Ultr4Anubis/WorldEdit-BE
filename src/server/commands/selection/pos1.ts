@@ -1,7 +1,6 @@
 import { Player } from 'mojang-minecraft';
 import { Server } from '../../../library/Minecraft.js';
-import { printDebug, printLocation } from '../../util.js';
-import { PlayerUtil } from '../../modules/player_util.js';
+import { getPlayerBlockLocation, printDebug, printLocation } from '../../util.js';
 
 import { parsePosition } from './selection_helper.js';
 import { commandList } from '../command_list.js';

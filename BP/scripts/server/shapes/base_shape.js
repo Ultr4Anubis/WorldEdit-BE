@@ -1,6 +1,5 @@
 import { Mask } from '../modules/mask.js';
-import { PlayerUtil } from '../modules/player_util.js';
-import { subtractLocations, getWorldMinY, getWorldMaxY } from '../util.js';
+import { getPlayerDimension, subtractLocations, getWorldMinY, getWorldMaxY } from '../util.js';
 export class Shape {
     constructor() {
         this.usedInBrush = false;

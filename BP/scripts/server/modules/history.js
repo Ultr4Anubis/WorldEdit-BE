@@ -1,7 +1,6 @@
 import { MinecraftBlockTypes } from 'mojang-minecraft';
 import { Regions } from './regions.js';
-import { canPlaceBlock, regionMin } from '../util.js';
-import { PlayerUtil } from './player_util.js';
+import { canPlaceBlock, getPlayerDimension, regionMin } from '../util.js';
 import { MAX_HISTORY_SIZE, HISTORY_MODE, BRUSH_HISTORY_MODE } from '../../config.js';
 let historyId = Date.now();
 export class History {

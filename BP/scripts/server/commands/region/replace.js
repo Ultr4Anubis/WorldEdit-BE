@@ -1,5 +1,4 @@
-import { regionMax, regionMin } from '../../util.js';
-import { PlayerUtil } from '../../modules/player_util.js';
+import { getPlayerDimension, regionMax, regionMin } from '../../util.js';
 import { Pattern } from '../../modules/pattern.js';
 import { commandList } from '../command_list.js';
 import { RawText } from '../../modules/rawtext.js';

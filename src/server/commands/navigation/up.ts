@@ -2,8 +2,7 @@ import { Player } from 'mojang-minecraft';
 import { Server } from '../../../library/Minecraft.js';
 import { assertBuilder, assertValidInteger } from '../../modules/assert.js';
 import { RawText } from '../../modules/rawtext.js';
-import { printLocation } from '../../util.js';
-import { PlayerUtil } from '../../modules/player_util.js';
+import { getPlayerBlockLocation, getPlayerDimension, printLocation } from '../../util.js';
 import { commandList } from '../command_list.js';
 
 const registerInformation = {
