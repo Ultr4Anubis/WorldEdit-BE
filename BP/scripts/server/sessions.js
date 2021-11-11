@@ -36,7 +36,6 @@ export class PlayerSession {
         this.history = new History(this.player);
         this.selectionPoints = [];
         this.setTool('pattern_picker');
-        this.setTool('pattern_air_picker');
         this.setTool('selection_wand');
         this.setTool('navigation_wand');
         this.setTool('cut');
